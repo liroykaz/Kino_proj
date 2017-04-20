@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block main %}
+    {% load staticfiles %}
+
+      <div class="col-md-12 content">
+
+				<center><h1>{{film.name}}</h1>
+				<img src="{{film.photo.url }}" alt="..." width="300"></center>
+
+				<center><p>{{film.description}}</p></center>
+
+				<center><table>
+				<tr><td><b>Название:</b></td>	<td>{{film.name}}</td></tr>
+				<tr><td><b>Оригинальное название: </b></td>	<td> {{film.orig_name}}</td></tr>
+				<tr><td><b>Год:</b></td>	<td>{{film.year}}</td></tr>
+				<tr><td><b>Страна:</b></td>	<td>{{film.country}}</td></tr>
+				<tr><td><b>Слоган:</b></td>	<td>{{film.tagline}}</td></tr>
+				<tr><td><b>Режиссер:</b></td>	<td>{{film.producer}}</td></tr>
+				<tr><td><b>Жанр:</b></td>	<td>{{film.genre}}</td></tr>
+				<tr><td><b>Время:</b></td>	<td>{{film.time}}</td></tr>
+				<tr><td><b>Цикл:</b></td>	<td>{{film.cycle}}</td></tr>
+				<tr><td><b>Доп. язык озвучки:</b></td>	<td>{{film.language}}</td></tr>
+				<tr><td><b>В главных ролях:</b></td><td>
+					{{film.artists}}
+				</td></tr>
+				</table>
+
+				<a class="btn btn-primary btn-large" href="../polushablon/kinoteatr.html">
+					Купить билет
+				</a>
+				</center>
+
+
+			</div>
+{% endblock %}
