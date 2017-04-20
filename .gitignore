@@ -1,4 +1,5 @@
 *.pyc
+*.idea
 __pycache__
 kino_venv
 db.sqlite3
